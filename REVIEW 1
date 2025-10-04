@@ -1,0 +1,52 @@
+1. Project Overview
+
+-> Fuel Efficiency Tracker is a console-based Java application that helps users:
+-> Manage vehicles
+-> Record trips
+-> Monitor fuel usage
+-> Calculate fuel efficiency
+
+2. Features
+
+1. Add multiple vehicles with name, type, and fuel details
+2. Record trips including distance traveled and fuel consumed
+3. Refill fuel for vehicles
+4. View vehicle details, trip logs, and fuel efficiency
+5. Monitor the most efficient vehicle among all
+6. Background fuel monitoring using a thread to warn if fuel is low
+7. Exception handling for insufficient fuel scenarios
+
+3. Core Java Concepts Implemented
+-> Concept	Implementation
+-> Classes & Objects	Vehicle, Trip, FuelMonitor, FuelEfficiencyTracker
+-> Collections	ArrayList to store trips, HashMap to store vehicles
+-> Thread	FuelMonitor runs in background to monitor fuel levels
+-> Custom Exception	InsufficientFuelException with try-catch blocks
+4. Installation & Setup
+
+-> Install Java JDK (version 8 or above)
+-> Clone or download the repository
+-> Open terminal or command prompt
+-> Navigate to the folder containing FuelEfficiencyTracker.java
+
+5. How to Use
+      Menu Options:
+
+            -> Add a new vehicle
+            -> Record a trip for a vehicle
+            -> Refill fuel for a vehicle
+            -> View details of vehicles and trips
+            -> Show the most fuel-efficient vehicle
+            -> Exit the application
+            -> Input values as prompted for fuel, distance, or price
+            -> Watch console for low-fuel warnings triggered by the background thread
+
+6. Steps Demonstrated
+
+-> Add vehicles with name, type, and fuel capacity
+-> Refill vehicle fuel and track total fuel used
+-> Record trips with distance and fuel used
+-> Display trip details and calculate efficiency for each trip
+-> Track overall efficiency for each vehicle
+-> Monitor vehicles in background for low fuel using threads
+-> Handle exceptions if a trip uses more fuel than available
