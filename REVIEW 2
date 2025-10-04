@@ -1,0 +1,75 @@
+1. Project Description
+
+    -> Vehicles
+    -> Trips
+    -> Fuel efficiency
+
+2. Features
+
+    1. Add vehicles with type selection: CAR, BIKE, TRUCK
+    2. Record trips with distance and fuel used
+    3. Refill fuel and track total consumption and price per litre
+    4. Display trips and calculate individual & overall efficiency
+    5. Show most fuel-efficient vehicle
+    6. Background fuel monitoring thread
+    7. Exception handling for insufficient fuel
+
+
+3. Classes and Their Responsibilities
+
+    -> Class Name	Responsibility
+    -> Vehicle	Stores vehicle details, trips, fuel info, efficiency
+    -> Trip	Represents a single trip with distance and fuel used
+    -> FuelMonitor	Thread to monitor fuel levels in background
+    -> InsufficientFuelException	Custom exception for insufficient fuel
+    -> FuelEfficiencyTracker	Main class with console menu and flow
+
+4. Collections Used
+
+    -> ArrayList<Trip> → Stores trips for each vehicle
+    -> ArrayList<Vehicle> → Stores all vehicles
+    -> HashMap<String, Vehicle> → Quick access to vehicles by name
+
+5. Thread Usage
+    -> FuelMonitor thread checks if a vehicle’s fuel is below 5 liters
+    -> Each vehicle added starts a new monitoring thread
+
+6. Custom Exception Handling
+
+    -> InsufficientFuelException is thrown if a trip exceeds available fuel
+    -> Handled using try-catch blocks to avoid program crash
+
+7. Installation Steps
+
+    -> Ensure Java JDK is installed
+    -> Download or clone the repository
+    -> Open terminal/command prompt
+    -> Navigate to the folder containing FuelEfficiencyTracker.java
+
+Compile program:
+javac FuelEfficiencyTracker.java
+
+Run program:
+java FuelEfficiencyTracker
+
+8. Usage Instructions
+
+    Run the program and select menu options:
+    
+    1. Add Vehicle
+    
+    2. Record Trip
+    
+    3. Refill Fuel
+    
+    4. View Vehicle Details
+    
+    5. Show Most Efficient Vehicle
+    
+    6. Exit
+
+Enter numeric values as prompted
+
+Low-fuel warnings appear automatically from the background thread
+
+Trip efficiencies and vehicle summaries are displayed in tabular format
